@@ -4,3 +4,19 @@
     height: 50px;
     background-color: rgb(55, 55, 171);
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
