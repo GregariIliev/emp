@@ -16,7 +16,6 @@ export function FileLoader({
         csvConvertToProjects(csvFiles);
     };
 
-
     const handleLoad = (e) => {
         e.preventDefault();
 
@@ -30,25 +29,24 @@ export function FileLoader({
             const plainText = await file.text();
 
             const rows = plainText.trim().split('\r\n');
-
+            
             const splitedRows = rows.map(r => r.split(', '));
 
             const projects = [];
 
             splitedRows.forEach(row => {
 
-                const firstDate = new Date(row[2]).getTime();
+                const dateFrom = new Date(row[2]).getTime();
 
-                let secondDate = new Date(row[3]).getTime();
+                let dateTo = new Date(row[3]).getTime();
 
-                if (isNaN(secondDate)) {
-                    secondDate = Date.now();
+                if (isNaN(dateTo)) {
+                    dateTo = Date.now();
                 }
 
-                const milliseconds = secondDate - firstDate;
+                const milliseconds = dateTo - dateFrom;
 
                 const days = Math.round(milliseconds / (1000 * 3600 * 24));
-
 
                 const index = projects.findIndex(project => project.id === row[1]);
 
@@ -76,7 +74,6 @@ export function FileLoader({
             getProjects(projects);
         })
     }
-
 
     return (
         <div className="drag-area"
