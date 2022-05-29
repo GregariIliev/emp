@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Table.css";
 
-export function Table() {
+export function Table({
+}) {
     return (
         <table className="table">
             <tbody>
