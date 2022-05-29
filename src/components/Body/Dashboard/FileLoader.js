@@ -1,5 +1,13 @@
 export function FileLoader({
 }) {
+    const handleDrop = (e) => {
+        e.preventDefault();
+
+        const files = Array.from(e.dataTransfer.files);
+
+    };
+
+
     const handleLoad = (e) => {
         e.preventDefault();
 
@@ -8,6 +16,7 @@ export function FileLoader({
     }
     return (
         <div className="drag-area"
+            onDrop={e => handleDrop(e)}
 
             <div className="icon"><i className="fas fa-cloud-upload-alt"></i></div>
             <header>Drag & Drop to Upload CSV File</header>
