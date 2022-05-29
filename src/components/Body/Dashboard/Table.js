@@ -3,6 +3,9 @@ import "./Table.css";
 
 export function Table({
 }) {
+
+    const [table, setTable] = useState();
+
     return (
         <table className="table">
             <tbody>
