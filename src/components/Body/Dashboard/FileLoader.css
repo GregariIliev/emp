@@ -1,0 +1,78 @@
+.drag-area {
+  border: 2px dashed rgb(0, 0, 0);
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.drag-area.active {
+  border: 2px solid rgb(216, 29, 29);
+}
+
+.drag-area .icon {
+  font-size: 50px;
+  color: rgb(79, 8, 242);
+}
+
+.drag-area header {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.drag-area span {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: rgb(79, 8, 242);
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.drag-area img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.custom-file-input {
+  display: flex;
+  width: 50%;
+  height: 32px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: 'Load file';
+  color: black;
+  text-align: center;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
