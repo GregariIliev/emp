@@ -1,3 +1,4 @@
+import "./FileLoader.css";
 
 export function FileLoader({
     getProjects
