@@ -13,6 +13,7 @@ export function FileLoader({
 
         const csvFiles = Array.from(e.dataTransfer.files);
 
+        csvConvertToProjects(csvFiles);
     };
 
 
@@ -21,6 +22,7 @@ export function FileLoader({
 
         const csvFiles = Array.from(e.target.files);
 
+        csvConvertToProjects(csvFiles);
     }
 
     const csvConvertToProjects = (files) => {
