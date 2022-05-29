@@ -2,9 +2,16 @@ import { useEffect, useState } from "react";
 import "./Table.css";
 
 export function Table({
+    tableData
 }) {
 
     const [table, setTable] = useState();
+
+    useEffect(() => {
+
+        setTable(tableData);
+
+    }, [tableData])
 
     return (
         <table className="table">
