@@ -1,5 +1,11 @@
 export function FileLoader({
 }) {
+    const handleLoad = (e) => {
+        e.preventDefault();
+
+        const files = Array.from(e.target.files);
+
+    }
     return (
         <div className="drag-area"
 
