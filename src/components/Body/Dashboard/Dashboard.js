@@ -7,6 +7,8 @@ import "./Dashboard.css";
          </div>
      )
  }
+import { useState } from "react";
+
 import { Table } from "./Table.js";
 import { FileLoader } from "./FileLoader.js";
 
