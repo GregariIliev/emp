@@ -1,4 +1,5 @@
 export function FileLoader({
+    getProjects
 }) {
 
 
@@ -70,6 +71,7 @@ export function FileLoader({
                 p.employees.sort((e1, e2) => e2.workDays - e1.workDays);
             });
             
+            getProjects(projects);
         })
     }
 
