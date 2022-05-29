@@ -1,12 +1,6 @@
 import "./Dashboard.css";
 
 
- export function Dashboard(){
-     return (
-         <div className="dashboard">
-         </div>
-     )
- }
 import { useState } from "react";
 
 import { Table } from "./Table.js";
@@ -16,3 +10,10 @@ export function Dashboard() {
 
     const [projectsData, setProjectsData] = useState();
 
+    return (
+        <div className="dashboard">
+            <Table tableData={projectsData} />
+            <FileLoader getProjects={getProjects} />
+        </div>
+    )
+}
