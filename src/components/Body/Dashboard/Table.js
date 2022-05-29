@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import "./Table.css";
+
+import { useEffect, useState } from "react";
 
 export function Table({
     tableData
