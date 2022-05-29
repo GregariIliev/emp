@@ -22,6 +22,19 @@ export function Table({
                     <th>Project ID</th>
                     <th>Worked days</th>
                 </tr>
+
+                {table
+                    ? tableData.map(project => (
+                        <tr key={project.id}>
+                            <td>{project.employees[0].id}</td>
+                            <td>{project.employees[1].id}</td>
+                            <td>{project.id}</td>
+                            <td>{project.employees[0].workDays + project.employees[1].workDays}</td>
+                        </tr>
+                    ))
+                    : null
+                }
+
             </tbody>
         </table>
     )
