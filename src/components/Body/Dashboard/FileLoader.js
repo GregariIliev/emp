@@ -29,7 +29,7 @@ export function FileLoader({
             const plainText = await file.text();
 
             const rows = plainText.trim().split('\r\n');
-            
+
             const splitedRows = rows.map(r => r.split(', '));
 
             const projects = [];
@@ -59,7 +59,7 @@ export function FileLoader({
                         }]
                     });
 
-                }else {
+                } else {
                     projects[index].employees.push({
                         id: row[0],
                         workDays: days
@@ -70,7 +70,7 @@ export function FileLoader({
             projects.forEach(p => {
                 p.employees.sort((e1, e2) => e2.workDays - e1.workDays);
             });
-            
+
             getProjects(projects);
         })
     }
