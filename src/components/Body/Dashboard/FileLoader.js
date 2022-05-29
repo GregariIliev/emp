@@ -4,8 +4,6 @@ export function FileLoader({
     getProjects
 }) {
 
-
-
     const handleDragOver = (e) => {
         e.preventDefault();
     };
