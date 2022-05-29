@@ -10,7 +10,7 @@ export function FileLoader({
     const handleDrop = (e) => {
         e.preventDefault();
 
-        const files = Array.from(e.dataTransfer.files);
+        const csvFiles = Array.from(e.dataTransfer.files);
 
     };
 
@@ -18,7 +18,7 @@ export function FileLoader({
     const handleLoad = (e) => {
         e.preventDefault();
 
-        const files = Array.from(e.target.files);
+        const csvFiles = Array.from(e.target.files);
 
     }
     return (
