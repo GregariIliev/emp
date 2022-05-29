@@ -7,3 +7,7 @@ import "./Dashboard.css";
          </div>
      )
  }
+import { Table } from "./Table.js";
+import { FileLoader } from "./FileLoader.js";
+
+export function Dashboard() {
