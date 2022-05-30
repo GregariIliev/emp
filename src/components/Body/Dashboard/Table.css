@@ -7,11 +7,31 @@
 
 td,
 th {
-    border: 1px solid #dddddd;
+    border: 1px solid #000000;
     text-align: left;
+}
+
+th {
     padding: 8px;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+td a:hover {
+    cursor: pointer;
+    background-color: #8d60f6;
+}
+
+td a {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.workDays {
+    padding: 8px;
 }
