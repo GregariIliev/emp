@@ -77,8 +77,8 @@ export function FileLoader({
 
     return (
         <div className="drag-area"
-            onDrop={e => handleDrop(e)}
-            onDragOver={e => handleDragOver(e)}>
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}>
 
             <div className="icon"><i className="fas fa-cloud-upload-alt"></i></div>
             <header>Drag & Drop to Upload CSV File</header>
