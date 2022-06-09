@@ -60,17 +60,24 @@ export function FileLoader({
                     });
 
                 } else {
-                    projects[index].employees.push({
-                        id: row[0],
-                        workDays: days
-                    });
+
+                    const employee = projects[index].employees.find(e => e.id === row[0]);
+                    
+                    if (employee) {
+                        employee.workDays = employee.workDays + days
+                    } else {
+                        projects[index].employees.push({
+                            id: row[0],
+                            workDays: days
+                        });
+                    }
                 }
             });
-
+            
             projects.forEach(p => {
                 p.employees.sort((e1, e2) => e2.workDays - e1.workDays);
             });
-
+            
             getProjects(projects);
         })
     }
